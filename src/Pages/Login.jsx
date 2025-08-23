@@ -14,7 +14,7 @@ export default function Login() {
       const [error,seterror]=useState({})
       useEffect(()=>{
         if (sessionStorage.getItem('username'))
-          window.location.href="/startpage"
+          navigate("/Startpage")
       },[])
       const handlechange=(e)=>{
 const {name,value}=e.target
