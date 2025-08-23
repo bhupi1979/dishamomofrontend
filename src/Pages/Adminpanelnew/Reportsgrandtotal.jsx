@@ -104,7 +104,7 @@ const columns = [{
         }}
       >
         <h2>Table Data</h2>
-        <h4 className=' text-danger'>GrandTotal is Rs {GrandTotal}</h4>
+        <h4 className=' text-danger'>Total Sale is Rs {GrandTotal}</h4>
         <div style={{ display: "flex", gap: "10px" }}>
            <input
         type="text"
