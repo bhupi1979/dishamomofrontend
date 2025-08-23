@@ -14,7 +14,7 @@ export default function IdleLogout() {
     // Reset Timer on Activity
     const resetTimer = () => {
       clearTimeout(timeout);
-      timeout = setTimeout(logout, 5*60*1000); // 30 minutes
+      timeout = setTimeout(logout, 15*60*1000); // 30 minutes
     };
 
     // User activity events

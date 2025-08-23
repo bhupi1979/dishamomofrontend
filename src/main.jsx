@@ -18,6 +18,7 @@ import Adminpassword from './Comman/Adminpassword.jsx'
 //import AdminPanelnew from './Adminpanel/Adminpanel1.jsx'
 import Adminpanel from './Pages/Adminpanel.jsx'
 import Addtocart from './Pages/Mainoperation/Addtocart.jsx'
+import Movetotop from './Movetotop.jsx'
 let allroutes=createBrowserRouter([
   {
     path:'/',
@@ -55,6 +56,7 @@ let allroutes=createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Movetotop/>
     <IdleLogout/>
   <RouterProvider router={allroutes}/>
   <ToastContainer  position="top-right"
