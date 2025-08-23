@@ -991,8 +991,8 @@ export default function AdminPanel() {
   const[categories,setCategories]=useState([])
   const navigate=useNavigate()
   useEffect(() => {
-    if (!sessionStorage.getItem("username")) window.location.href = "/";
-    else if (!sessionStorage.getItem("adminpass")) window.location.href = "/startpage";
+    if (!sessionStorage.getItem("username")) navigate("/")
+    else if (!sessionStorage.getItem("adminpass")) navigate("/startpage")
   }, []);
 
   const logout = () => {
