@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {cartdataviewbystatus, fetchTables } from './Adminpanelnew/Api'
+import { formatDate, formatTime } from './Adminpanelnew/Dateconversion'
 
 
 export default function Startingpage() {
@@ -16,28 +17,28 @@ export default function Startingpage() {
   // const [roomarr,setroomarr]=useState([])
  
 
-   const formatDate = (dateStr) => {
-    if (!dateStr) return "";
-    const d = new Date(dateStr);
-    const day = String(d.getDate()).padStart(2, "0");
-    const month = String(d.getMonth() + 1).padStart(2, "0");
-    const year = String(d.getFullYear()).slice(-2); // last 2 digits
-    return `${day}-${month}-${year}`; // dd-mm-yy
-  };
+  //  const formatDate = (dateStr) => {
+  //   if (!dateStr) return "";
+  //   const d = new Date(dateStr);
+  //   const day = String(d.getDate()).padStart(2, "0");
+  //   const month = String(d.getMonth() + 1).padStart(2, "0");
+  //   const year = String(d.getFullYear()).slice(-2); // last 2 digits
+  //   return `${day}-${month}-${year}`; // dd-mm-yy
+  // };
 
-  const formatTime = (timeStr) => {
-    if (!timeStr) return "";
+  // const formatTime = (timeStr) => {
+  //   if (!timeStr) return "";
     
-    const d = new Date(timeStr);
-   // Format time (hh:mm:ss AM/PM)
-  let hours = d.getHours();
-  const minutes = String(d.getMinutes()).padStart(2, "0");
-  const seconds = String(d.getSeconds()).padStart(2, "0");
-  const ampm = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12 || 12;
+  //   const d = new Date(timeStr);
+  //  // Format time (hh:mm:ss AM/PM)
+  // let hours = d.getHours();
+  // const minutes = String(d.getMinutes()).padStart(2, "0");
+  // const seconds = String(d.getSeconds()).padStart(2, "0");
+  // const ampm = hours >= 12 ? "PM" : "AM";
+  // hours = hours % 12 || 12;
 
-  return `${hours}:${minutes}:${seconds} ${ampm}`;
-  };
+  // return `${hours}:${minutes}:${seconds} ${ampm}`;
+  // };
   useEffect(()=>{
     setusername(sessionStorage.getItem('username'))
     const datenew= new Date(sessionStorage.getItem('createat'))
@@ -102,7 +103,7 @@ export default function Startingpage() {
       <ul className="list-group list-group-horizontal-lg">
   <li className="list-group-item"><h5>WELCOME user{username} register on date {userdate}</h5>
 </li>
-  <li className="list-group-item">Go to Admin Panel <button className=' px-3 bg bg-dark text-warning' onClick={gotoadmin}>Click</button></li>
+  <li className="list-group-item bg bg-dark text-warning fs-5">Go to Admin Panel <button className=' px-3 rounded-3 py-1 text-warning' onClick={gotoadmin}>Click</button></li>
   <li className="list-group-item"><button className=' p-1 bg bg-info text-danger' onClick={logout1}>LOGOUT</button></li>
 </ul>
 <h1 className='text-start'>THE DINING TABLE{tc}</h1>
