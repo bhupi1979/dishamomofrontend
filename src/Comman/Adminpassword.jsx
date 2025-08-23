@@ -6,7 +6,7 @@ export default function Adminpassword() {
     const [passkey,setpasskey]=useState("")
     
     let gotostartpage=()=>{
-      window.location.href="/startpage"
+      navigate("/startpage")
     }
 let gotoadminpanel=()=>{
    if(import.meta.env.VITE_API_ADMIN_KEY==passkey)

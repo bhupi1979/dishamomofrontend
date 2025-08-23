@@ -40,7 +40,7 @@ export default function Reports() {
       return (
     <> {loading && <Loader />}
         <div className="container">
-        <h4>SELECT RECORDS BETWEEN START DATE AND END DATE</h4>
+        <h4>SELECT TOTAL SALE BETWEEN START DATE AND END DATE</h4>
 <div className="row bg-info">
     <div className="mb-3 text-start p-4 col-lg-6">
     <label className="form-label ">Enter start date</label>

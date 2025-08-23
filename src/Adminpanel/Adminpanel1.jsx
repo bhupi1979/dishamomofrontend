@@ -2,16 +2,18 @@ import React, { useEffect } from "react";
 import CategoryManager from "./CategoryManager";
 import SubCategoryManager from "./SubCategoryManager";
 import TableManager from "./TableManager";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminPanelnew() {
+  const navigate=useNavigate()
   useEffect(() => {
-    if (!sessionStorage.getItem("username")) window.location.href = "/";
-    else if (!sessionStorage.getItem("adminpass")) window.location.href = "/startpage";
+    if (!sessionStorage.getItem("username")) navigate("/")
+    else if (!sessionStorage.getItem("adminpass")) navigate("/startpage")
   }, []);
 
   const logout = () => {
     sessionStorage.removeItem("adminpass");
-    window.location.href = "/startpage";
+    navigate("/startpage")
   };
 
   return (
