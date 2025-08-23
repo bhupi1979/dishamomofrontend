@@ -67,7 +67,7 @@ let grandTotal=0
     // ===== FOOTER =====
     doc.line(5, y + 2, 75, y + 2); // line before grand total
     doc.setFontSize(10);
-    doc.text(`Grand Total: ${grandTotal.toFixed(2)}`, 10, y + 8);
+    doc.text(`Grand Total: ${grandTotal}`, 10, y + 8);
     doc.line(5, y + 10, 75, y + 10); // line after grand total
 
     // ===== PRINT =====
