@@ -69,7 +69,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     doc.setFontSize(10);
     doc.text(`Grand Total:Rs ${grandTotal.toFixed(2)}`, 20, y + 8)
     doc.line(5, y + 10, 75, y + 10); // line after grand total
-doc.text("Thank you for visiting Disha-Momo",10,y+12)
+doc.text("Thank you for visiting Disha-Momo",10,y+14)
     // ===== PRINT =====
     window.open(doc.output("bloburl"), "_blank").print();
   };
