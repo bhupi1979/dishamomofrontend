@@ -995,7 +995,7 @@ export default function AdminPanel() {
 
   const logout = () => {
     sessionStorage.removeItem("adminpass");
-    window.location.href = "/startpage";
+    window.location.href = "/Startpage";
   };
 const loadCategories = async () => {
   
