@@ -139,7 +139,7 @@ const generateqt = async (e) => {
     }
 
     setcartdata([]);
-    navigate("/startpage");
+    navigate("/startingpage");
   } catch (err) {
     toast("Error while saving order! " + err);
   } finally {
@@ -150,7 +150,7 @@ const generateqt = async (e) => {
   return (
     <>
     {loading&&<Loader/>}
-    <h1 className='text-uppercase'>This is add to cart section</h1> <span><button className='btn btn-info' onClick={()=>{window.location.href="/startpage"}} >GO-Back</button></span>
+    <h1 className='text-uppercase'>This is add to cart section</h1> <span><button className='btn btn-info' onClick={()=>{window.location.href="/Startingpage"}} >GO-Back</button></span>
     <div className="container">
         <div className="row">
             <div className="col-lg-5">
