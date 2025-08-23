@@ -985,9 +985,11 @@ import Subcategory from "./Adminpanelnew/Subcategory";
 import Maintable from "./Adminpanelnew/Maintable";
 import { fetchCategories } from "./Adminpanelnew/Api";
 import Reports from "./Adminpanelnew/Reports";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminPanel() {
   const[categories,setCategories]=useState([])
+  const navigate=useNavigate()
   useEffect(() => {
     if (!sessionStorage.getItem("username")) window.location.href = "/";
     else if (!sessionStorage.getItem("adminpass")) window.location.href = "/startpage";
@@ -995,7 +997,7 @@ export default function AdminPanel() {
 
   const logout = () => {
     sessionStorage.removeItem("adminpass");
-    window.location.href = "/Startpage";
+   navigate("/Startpage")
   };
 const loadCategories = async () => {
   

@@ -150,7 +150,7 @@ const generateqt = async (e) => {
   return (
     <>
     {loading&&<Loader/>}
-    <h1 className='text-uppercase'>This is add to cart section</h1> <span><button className='btn btn-info' onClick={()=>{window.location.href="/Startpage"}} >GO-Back</button></span>
+    <h1 className='text-uppercase'>This is add to cart section</h1> <span><button className='btn btn-info' onClick={()=>{navigate("/Startpage")}} >GO-Back</button></span>
     <div className="container">
         <div className="row">
             <div className="col-lg-5">
