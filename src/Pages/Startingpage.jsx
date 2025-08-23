@@ -103,7 +103,7 @@ export default function Startingpage() {
       <ul className="list-group list-group-horizontal-lg">
   <li className="list-group-item"><h5>WELCOME user{username} register on date {userdate}</h5>
 </li>
-  <li className="list-group-item bg bg-dark text-warning fs-5">Go to Admin Panel <button className=' px-3 rounded-circle py-1 text-danger' onClick={gotoadmin}>Click</button></li>
+  <li className="list-group-item bg bg-dark text-warning fs-5">Go to Admin Panel <button className=' btn btn-info px-3 rounded-circle py-1 text-danger' onClick={gotoadmin}>Click</button></li>
   <li className="list-group-item"><button className=' p-1 bg bg-info text-danger' onClick={logout1}>LOGOUT</button></li>
 </ul>
 <h1 className='text-start'>THE DINING TABLE{tc}</h1>
