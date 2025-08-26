@@ -18,6 +18,8 @@ const location=useLocation()
 const {findcartdata,table}=location.state||{}
   
   useEffect(() => {
+    if(table===undefined||table===null||table==="")
+      window.location.href="/startpage"
     if(!sessionStorage.getItem('username'))
       window.location.href="/login"
     loadCategories();
