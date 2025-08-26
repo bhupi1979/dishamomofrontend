@@ -5,7 +5,7 @@ export default function Adminpassword() {
     const navigate =useNavigate()
     const [passkey,setpasskey]=useState("")
     useEffect(()=>{
-       if(!sessionStorage.getitem('username'))
+       if(!sessionStorage.getItem('username'))
         window.location.href="/login"
     },[])
     let gotostartpage=()=>{
