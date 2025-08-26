@@ -31,16 +31,16 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
 
     // ===== TABLE HEADER =====
     let startY = 34;
-    doc.setFontSize(9);
+    doc.setFontSize(7);
     doc.setLineWidth(0.2);
     doc.line(5, startY - 5, 75, startY - 5); // top line
 
     // Columns: Sr No, Price, Bathrooms, Total Amount
     
-    doc.text("Name", 6, startY);
-    doc.text("Qty", 45, startY);
-    doc.text("Price", 50, startY);
-    doc.text("Sub-Total", 55, startY);
+    doc.text("Name", 1, startY);
+    doc.text("Qty", 30, startY);
+    doc.text("Price", 48, startY);
+    doc.text("Sub-Total", 68, startY);
     doc.line(5, startY + 1, 75, startY + 1); // line under header
 
     // ===== TABLE ROWS =====
@@ -51,10 +51,10 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
       const total = Number(item.total);
       grandTotal += total;
 
-      doc.text(String(item.name), 6, y)// Sr No
-      doc.text(String(item.qty), 45, y) // Price
-      doc.text(String(item.price), 50, y) // Bathrooms
-      doc.text(String(item.total), 55, y) // Bathrooms
+      doc.text(String(item.name), 1, y)// Sr No
+      doc.text(String(item.qty), 30, y) // Price
+      doc.text(String(item.price), 48, y) // Bathrooms
+      doc.text(String(item.total), 68, y) // Bathrooms
       y += 6;
 
       // New Page if height exceeds
@@ -66,10 +66,10 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
 
     // ===== FOOTER =====
     doc.line(5, y + 2, 75, y + 2); // line before grand total
-    doc.setFontSize(10);
-    doc.text(`Grand Total:Rs ${grandTotal}`, 35, y + 8)
+    doc.setFontSize(9);
+    doc.text(`Grand Total:Rs ${grandTotal}`, 30, y + 8)
     doc.line(5, y + 10, 75, y + 10); // line after grand total
-doc.text("!!! Thank you for visiting Disha-Momo !!!",10,y+14)
+doc.text("!!! Thank you for visiting Disha-Momo !!!",1,y+14)
     // ===== PRINT =====
     window.open(doc.output("bloburl"), "_blank").print();
   };
