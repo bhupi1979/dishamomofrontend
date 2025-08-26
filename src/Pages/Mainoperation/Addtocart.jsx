@@ -18,6 +18,8 @@ const location=useLocation()
 const {findcartdata,table}=location.state||{}
   
   useEffect(() => {
+    if(!sessionStorage.getItem('username'))
+      window.location.href="/login"
     loadCategories();
   if(findcartdata)
   { //alert(findcartdata.orders[0].name)

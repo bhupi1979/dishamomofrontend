@@ -40,6 +40,8 @@ export default function Startingpage() {
   // return `${hours}:${minutes}:${seconds} ${ampm}`;
   // };
   useEffect(()=>{
+    if(!sessionStorage.getItem('username'))
+         window.location.href="/login"
     setusername(sessionStorage.getItem('username'))
     const datenew= new Date(sessionStorage.getItem('createat'))
     setuserdate(`${formatDate(datenew)} and time is:-${formatTime(datenew)}`)
