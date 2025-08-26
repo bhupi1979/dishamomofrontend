@@ -7,6 +7,8 @@ export default function Adminpassword() {
     useEffect(()=>{
        if(!sessionStorage.getItem('username'))
         window.location.href="/login"
+      if(sessionStorage.getItem('adminpass'))
+          navigate('/adminpanel')
     },[])
     let gotostartpage=()=>{
       navigate("/startpage")

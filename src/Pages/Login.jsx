@@ -15,6 +15,8 @@ export default function Login() {
       useEffect(()=>{
         if (sessionStorage.getItem('username'))
           navigate("/Startpage")
+        if(sessionStorage.getItem('adminpass'))
+          navigate('/adminpanel')
       },[])
       const handlechange=(e)=>{
 const {name,value}=e.target

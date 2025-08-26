@@ -13,6 +13,8 @@ export default function Register() {
 useEffect(()=>{
         if(sessionStorage.getItem('username'))
            navigate('/startpage')
+          if(sessionStorage.getItem('adminpass'))
+          navigate('/adminpanel')
       },[navigate])
 const handlechange=(e)=>{
 const {name,value}=e.target

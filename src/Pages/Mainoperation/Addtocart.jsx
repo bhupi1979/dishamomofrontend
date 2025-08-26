@@ -22,6 +22,8 @@ const {findcartdata,table}=location.state||{}
       window.location.href="/startpage"
     if(!sessionStorage.getItem('username'))
       window.location.href="/login"
+    if(sessionStorage.getItem('adminpass'))
+          navigate('/adminpanel')
     loadCategories();
   if(findcartdata)
   { //alert(findcartdata.orders[0].name)
