@@ -18,11 +18,14 @@ const location=useLocation()
 const {findcartdata,table}=location.state||{}
   
   useEffect(() => {
-    if(table===undefined||table===null||table==="")
+    if((table===undefined||table===null||table==="")&&!sessionStorage.getItem('adminpass'))
+    {
+       
       window.location.href="/startpage"
+    }
     if(!sessionStorage.getItem('username'))
       window.location.href="/login"
-    if(sessionStorage.getItem('adminpass'))
+   if(sessionStorage.getItem('adminpass'))
           navigate('/adminpanel')
     loadCategories();
   if(findcartdata)
