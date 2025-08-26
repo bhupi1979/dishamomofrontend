@@ -40,7 +40,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     doc.text("Name", 1, startY);
     doc.text("Qty", 30, startY);
     doc.text("Price", 48, startY);
-    doc.text("Sub-Total", 68, startY);
+    doc.text("Sub-Total", 58, startY);
     doc.line(5, startY + 1, 75, startY + 1); // line under header
 
     // ===== TABLE ROWS =====
@@ -54,7 +54,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
       doc.text(String(item.name), 1, y)// Sr No
       doc.text(String(item.qty), 30, y) // Price
       doc.text(String(item.price), 48, y) // Bathrooms
-      doc.text(String(item.total), 68, y) // Bathrooms
+      doc.text(String(item.total), 58, y) // Bathrooms
       y += 6;
 
       // New Page if height exceeds
@@ -67,7 +67,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     // ===== FOOTER =====
     doc.line(5, y + 2, 75, y + 2); // line before grand total
     doc.setFontSize(9);
-    doc.text(`Grand Total:Rs ${grandTotal}`, 30, y + 8)
+    doc.text(`Grand Total:Rs ${grandTotal}`, 25, y + 8)
     doc.line(5, y + 10, 75, y + 10); // line after grand total
 doc.text("!!! Thank you for visiting Disha-Momo !!!",1,y+14)
     // ===== PRINT =====
