@@ -1,10 +1,13 @@
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify/unstyled'
 export default function Adminpassword() {
     const navigate =useNavigate()
     const [passkey,setpasskey]=useState("")
-    
+    useEffect(()=>{
+       if(!sessionStorage.getitem('username'))
+        window.location.href="/login"
+    },[])
     let gotostartpage=()=>{
       navigate("/startpage")
     }
