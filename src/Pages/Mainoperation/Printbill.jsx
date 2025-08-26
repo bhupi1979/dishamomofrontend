@@ -37,10 +37,10 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
 
     // Columns: Sr No, Price, Bathrooms, Total Amount
     
-    doc.text("Name", 1, startY);
+    doc.text("Name", 3, startY);
     doc.text("Qty", 30, startY);
-    doc.text("Price", 48, startY);
-    doc.text("Sub-Total", 58, startY);
+    doc.text("Price", 40, startY);
+    doc.text("Sub-Total", 50, startY);
     doc.line(5, startY + 1, 75, startY + 1); // line under header
 
     // ===== TABLE ROWS =====
@@ -51,10 +51,10 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
       const total = Number(item.total);
       grandTotal += total;
 
-      doc.text(String(item.name), 1, y)// Sr No
+      doc.text(String(item.name), 3, y)// Sr No
       doc.text(String(item.qty), 30, y) // Price
-      doc.text(String(item.price), 48, y) // Bathrooms
-      doc.text(String(item.total), 58, y) // Bathrooms
+      doc.text(String(item.price), 40, y) // Bathrooms
+      doc.text(String(item.total), 50, y) // Bathrooms
       y += 6;
 
       // New Page if height exceeds
