@@ -14,7 +14,7 @@ export default function Login() {
       const [error,seterror]=useState({})
       useEffect(()=>{
         if (sessionStorage.getItem('username'))
-          navigate("/Startpage")
+          navigate("/startpage")
         if(sessionStorage.getItem('adminpass'))
           navigate('/adminpanel')
       },[])
