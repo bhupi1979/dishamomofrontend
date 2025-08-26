@@ -32,7 +32,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalrow);
 
     // ===== TABLE HEADER =====
     let startY = 34;
-    doc.setFontSize(9);
+    doc.setFontSize(7);
     doc.setLineWidth(0.2);
     doc.line(5, startY - 5, 75, startY - 5); // top line
 
@@ -66,7 +66,7 @@ let grandTotal=0
 
     // ===== FOOTER =====
     doc.line(5, y + 2, 75, y + 2); // line before grand total
-    doc.setFontSize(10);
+    doc.setFontSize(9);
     doc.text(`Grand Total: ${grandTotal}`, 20, y + 8);
     doc.line(5, y + 10, 75, y + 10); // line after grand total
 
