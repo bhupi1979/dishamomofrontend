@@ -15,7 +15,7 @@ export const Printbill=(obj)=>{
   const billDate = new Date().toLocaleString();
 const rowHeight = 6;
 
-const headerFooterHeight = 70;
+const headerFooterHeight = 80;
 const billHeight = headerFooterHeight + (rowHeight * totalRows);
   
     const doc = new jsPDF({
