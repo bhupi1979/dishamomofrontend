@@ -31,12 +31,12 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     doc.text(shopAddress1, 30, 15, { align: "center" })
      doc.text(shopAddress2, 30, 20, { align: "center" })
       doc.text(shopAddress3, 30, 25, { align: "center" })
-       doc.text(GST, 30, 15, { align: "center" })
-    doc.text(`Date: ${billDate} Mode:${Mode}`,  10, 30, {align:"center"})
-    doc.text(`cashier Bhavesh Billno :- 6643`, 10,35, { align: "center" });
+       doc.text(GST, 30, 30, { align: "center" })
+    doc.text(`Date: ${billDate} Mode:${Mode}`,  10, 35, {align:"center"})
+    doc.text(`cashier Bhavesh Billno :- 6643`, 10,40, { align: "center" });
 
     // ===== TABLE HEADER =====
-    let startY = 42;
+    let startY = 50;
     doc.setFontSize(8);
     doc.setLineWidth(0.2);
     doc.line(5, startY - 5, 75, startY - 5); // top line
@@ -44,9 +44,9 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     // Columns: Sr No, Price, Bathrooms, Total Amount
     
     doc.text("Name", 5, startY);
-    doc.text("Qty", 32, startY);
-    doc.text("Price", 42, startY);
-    doc.text("Sub-Total", 50, startY);
+    doc.text("Qty", 35, startY);
+    doc.text("Price", 44, startY);
+    doc.text("Sub-Total", 54, startY);
     doc.line(5, startY + 1, 75, startY + 1); // line under header
 
     // ===== TABLE ROWS =====
@@ -58,9 +58,9 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
       grandTotal += total;
 
       doc.text(String(item.name), 5, y)// Sr No
-      doc.text(String(item.qty), 32, y) // Price
-      doc.text(String(item.price), 42, y) // Bathrooms
-      doc.text(String(item.total), 50, y) // Bathrooms
+      doc.text(String(item.qty), 35, y) // Price
+      doc.text(String(item.price), 44, y) // Bathrooms
+      doc.text(String(item.total), 54, y) // Bathrooms
       y += 6;
 
       // New Page if height exceeds
@@ -75,7 +75,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     doc.setFontSize(10);
     doc.text(`Grand Total:Rs ${grandTotal}`, 25, y + 8)
     doc.line(5, y + 10, 75, y + 10); // line after grand total
-doc.text("!!! Thank you for visiting Relax INN !!!",1,y+14)
+doc.text("!!! Thank you for visiting Relax INN !!!",5,y+14)
     // ===== PRINT =====
     window.open(doc.output("bloburl"), "_blank").print();
   };
