@@ -159,7 +159,7 @@ const generateqt = async (e) => {
   return (
     <>
     {loading&&<Loader/>}
-    <h1 className=' bg-danger text-white text-uppercase'> BILLING SECTION</h1> <span className='d-block ms-auto'><button className='btn btn-info' onClick={()=>{navigate("/Startpage")}} >GO-Back</button></span>
+    <h1 className=' bg-danger text-white text-uppercase'> BILLING SECTION</h1> <span className='d-block float-end'><button className='btn btn-info' onClick={()=>{navigate("/Startpage")}} >GO-Back</button></span>
     <div className="container">
         <div className="row">
             <div className="col-lg-5">
