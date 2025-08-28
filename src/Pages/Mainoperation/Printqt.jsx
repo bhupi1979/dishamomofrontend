@@ -39,7 +39,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalrow);
     // Columns: Sr No, Price, Bathrooms, Total Amount
     
     doc.text("Name", 10, startY);
-    doc.text("Qty", 40, startY);
+    doc.text("Qty", 44, startY);
     // doc.text("Price", 36, startY);
     // doc.text("Sub-Total", 56, startY);
     doc.line(5, startY + 1, 75, startY + 1); // line under header
@@ -53,7 +53,7 @@ let grandTotal=0
       grandTotal += total;
 
       doc.text(String(item.name), 10, y); // Sr No
-      doc.text(String(item.qty), 40, y); // Price
+      doc.text(String(item.qty), 44, y); // Price
      
       y += 6;
 
@@ -67,7 +67,7 @@ let grandTotal=0
     // ===== FOOTER =====
     doc.line(5, y + 2, 75, y + 2); // line before grand total
     doc.setFontSize(9);
-    doc.text(`Grand Total: ${grandTotal}`, 20, y + 8);
+    doc.text(`Grand Total: ${grandTotal}`, 24, y + 8);
     doc.line(5, y + 10, 75, y + 10); // line after grand total
 
     // ===== PRINT =====
