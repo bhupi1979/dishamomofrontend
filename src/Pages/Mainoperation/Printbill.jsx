@@ -32,8 +32,8 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
      doc.text(shopAddress2, 30, 20, { align: "center" })
       doc.text(shopAddress3, 30, 25, { align: "center" })
        doc.text(GST, 30, 30, { align: "center" })
-    doc.text(`Date: ${billDate} Mode:${Mode}`,  10, 35, {align:"center"})
-    doc.text(`cashier Bhavesh Billno :- 6643`, 10,40, { align: "center" });
+    doc.text(`Date: ${billDate} Mode:${Mode}`,  30, 35, {align:"center"})
+    doc.text(`cashier Bhavesh Billno :- 6643`, 30,40, { align: "center" });
 
     // ===== TABLE HEADER =====
     let startY = 50;
