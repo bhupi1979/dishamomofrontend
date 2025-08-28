@@ -109,7 +109,7 @@ export default function Startingpage() {
   <li className="list-group-item"><button className=' p-1 bg bg-info text-danger' onClick={logout1}>LOGOUT</button></li>
 </ul>
 <h1 className='text-start'>THE DINING TABLE{tc}</h1>
-<div style={{backgroundColor:'#926c6cff'}} className='py-4'>
+<div style={{backgroundColor:'#a89393ff'}} className='py-4'>
 {tablearr.map((item,i)=>{
       
      const findcartdata=loadcartdata.find((v)=>v.mode==item)
@@ -119,14 +119,14 @@ return <button value={item}  key={i} className={findcartdata?'btn btn-warning mx
  }
  </div>
 <h1 className='text-start'>The Parcel</h1>
-<div style={{backgroundColor:'#4d3131ff'}} className='py-4'>
+<div style={{backgroundColor:'#a19595ff'}} className='py-4'>
 {parcelarr.map((item,i)=>{
    const findcartdata=loadcartdata.find((v)=>v.mode==item)
   return <button value={item}  key={i} className={findcartdata?'btn btn-warning mx-3 my-1':'btn btn-primary mx-3 my-1'} onClick={gotoorder}>{item}</button>
 }) }
 </div>
 <h1 className='text-start'>The Room</h1>
-<div style={{backgroundColor:'#6cb151ff'}} className='py-4'>
+<div style={{backgroundColor:'#a9cc9bff'}} className='py-4'>
 {roomarr.map((item,i)=>(
   <button value={item}  key={i} className='btn btn-primary mx-3 my-1'>{item}</button>
 )) }
