@@ -7,12 +7,15 @@ export const Printbill=(obj)=>{
         console.log(v) 
         console.log(i)
     totalRows=totalRows+1})
-    const shopName = "Disha-momoose";
-  const shopAddress = "Near Power house, Pratapgarh";
+    const shopName = "RELAX INN";
+    const shopAddress1 = "01 Pratapgarh CHITTORGARH";
+    const shopAddress2 = "MAIN ROAD Pratapgarh Rajasthan";
+    const shopAddress3 = "312605";
+    const GST="08FGFPP0032R122"
   const billDate = new Date().toLocaleString();
 const rowHeight = 6;
 
-const headerFooterHeight = 60;
+const headerFooterHeight = 70;
 const billHeight = headerFooterHeight + (rowHeight * totalRows);
   
     const doc = new jsPDF({
@@ -25,21 +28,24 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     doc.setFontSize(12);
     doc.text(shopName, 30, 10, { align: "center" });
     doc.setFontSize(9);
-    doc.text(shopAddress, 30, 15, { align: "center" })
-    doc.text('Mode:'+Mode,  30, 20, {align:"center"})
-    doc.text(`Date: ${billDate}`, 30, 28, { align: "center" });
+    doc.text(shopAddress1, 30, 15, { align: "center" })
+     doc.text(shopAddress2, 30, 20, { align: "center" })
+      doc.text(shopAddress3, 30, 25, { align: "center" })
+       doc.text(GST, 30, 15, { align: "center" })
+    doc.text(`Date: ${billDate} Mode:${Mode}`,  10, 30, {align:"center"})
+    doc.text(`cashier Bhavesh Billno :- 6643`, 10,35, { align: "center" });
 
     // ===== TABLE HEADER =====
-    let startY = 34;
-    doc.setFontSize(7);
+    let startY = 42;
+    doc.setFontSize(8);
     doc.setLineWidth(0.2);
     doc.line(5, startY - 5, 75, startY - 5); // top line
 
     // Columns: Sr No, Price, Bathrooms, Total Amount
     
-    doc.text("Name", 3, startY);
-    doc.text("Qty", 30, startY);
-    doc.text("Price", 40, startY);
+    doc.text("Name", 5, startY);
+    doc.text("Qty", 32, startY);
+    doc.text("Price", 42, startY);
     doc.text("Sub-Total", 50, startY);
     doc.line(5, startY + 1, 75, startY + 1); // line under header
 
@@ -51,9 +57,9 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
       const total = Number(item.total);
       grandTotal += total;
 
-      doc.text(String(item.name), 3, y)// Sr No
-      doc.text(String(item.qty), 30, y) // Price
-      doc.text(String(item.price), 40, y) // Bathrooms
+      doc.text(String(item.name), 5, y)// Sr No
+      doc.text(String(item.qty), 32, y) // Price
+      doc.text(String(item.price), 42, y) // Bathrooms
       doc.text(String(item.total), 50, y) // Bathrooms
       y += 6;
 
@@ -66,10 +72,10 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
 
     // ===== FOOTER =====
     doc.line(5, y + 2, 75, y + 2); // line before grand total
-    doc.setFontSize(9);
+    doc.setFontSize(10);
     doc.text(`Grand Total:Rs ${grandTotal}`, 25, y + 8)
     doc.line(5, y + 10, 75, y + 10); // line after grand total
-doc.text("!!! Thank you for visiting Disha-Momo !!!",1,y+14)
+doc.text("!!! Thank you for visiting Relax INN !!!",1,y+14)
     // ===== PRINT =====
     window.open(doc.output("bloburl"), "_blank").print();
   };
