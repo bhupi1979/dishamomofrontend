@@ -31,7 +31,7 @@ const billHeight = headerFooterHeight + (rowHeight * totalRows);
     doc.text(shopAddress1, 37, 15, { align: "center" })
      doc.text(shopAddress2, 37, 20, { align: "center" })
       doc.text(shopAddress3, 37, 25, { align: "center" })
-       doc.text(`GSTIN:${Mobileno}`, 37, 30, { align: "center" })
+       doc.text(`Mobil-no:${Mobileno}`, 37, 30, { align: "center" })
     doc.text(`Date: ${billDate} Mode:${Mode}`,37, 35, {align:"center"})
     doc.text(`cashier Dipesh Ameta Billno :- 6643`, 37, 40, { align: "center" });
 
