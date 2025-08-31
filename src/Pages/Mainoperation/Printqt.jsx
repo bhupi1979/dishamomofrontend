@@ -8,8 +8,8 @@ export const Printqt=(obj)=>{
             totalrow=totalrow+1
     })
     
-    const shopName = "RELAX INN";
-  const shopAddress = " 01 Chittoragarh road, Pratapgarh";
+    const shopName = "DISHAMOMO";
+  const shopAddress = "Near power house Pratapgah";
   const billDate = new Date().toLocaleString();
 const rowHeight = 6;
 
