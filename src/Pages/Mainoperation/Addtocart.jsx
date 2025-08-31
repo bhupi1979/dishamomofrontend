@@ -185,7 +185,7 @@ const generateqt = async (e) => {
   <h1 className='bg-info text-black-50 text-uppercase'>The Cart Items</h1>
   <h3 className='bg-secondary text-warning'>THE MODE: <b className='text-white'>{table}</b> </h3>
  
-   <table className="table table-success table-striped table-hover text-center w-75 mx-auto table-responsive p-4" border='1'>
+   <table className="table table-success table-striped table-hover text-center w-100 mx-auto table-responsive p-4" border='1'>
         <thead>
           <tr>
             <th>Name</th>
