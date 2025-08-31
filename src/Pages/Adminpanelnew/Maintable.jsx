@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 
-import { fetchTables,  getTableById, insertSubCategory,  updateTable } from "./Api";
+import { fetchTables,  getTableById,  insertTable,  updateTable } from "./Api";
 import Loader from "../../Comman/Loader";
 import { toast } from "react-toastify/unstyled";
 
@@ -47,7 +47,7 @@ const loadtable = async () => {
         await updateTable(table1._id,table1);
         toast("Maintable updated successfully!");
       } else {
-        await insertSubCategory(table1);
+        await insertTable (table1);
         toast("maintable added successfully!");
       }
       settable1({})
