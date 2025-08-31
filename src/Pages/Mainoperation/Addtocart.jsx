@@ -16,6 +16,7 @@ const [loading,setLoading]=useState(false)
 const navigate=useNavigate()
 const location=useLocation()
 const {findcartdata,table}=location.state||{}
+
   
   useEffect(() => {
     if((table===undefined||table===null||table==="")&&!sessionStorage.getItem('adminpass'))
@@ -166,7 +167,7 @@ const generateqt = async (e) => {
               <select className="form-select mb-4"
               onChange={oncategorychange}
               >
-                <option value="">-- Select --</option>
+                <option value="">-- Select-Category --</option>
             {categories.map((cat) => (
               <option key={cat._id} value={cat._id}>
                 {cat.categoryname}
@@ -182,7 +183,8 @@ const generateqt = async (e) => {
             </div>
             <div className="col-lg-7">
   <h1 className='bg-info text-black-50 text-uppercase'>The Cart Items</h1>
-  <h3 className='bg-secondary text-warning'>THE MODE: <b className='text-dark'>{table}</b> </h3>
+  <h3 className='bg-secondary text-warning'>THE MODE: <b className='text-white'>{table}</b> </h3>
+ 
    <table className="table table-success table-striped table-hover text-center w-75 mx-auto table-responsive p-4" border='1'>
         <thead>
           <tr>
