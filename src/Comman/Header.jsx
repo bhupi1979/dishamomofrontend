@@ -20,7 +20,7 @@ export default function Header() {
         </Navbar.Collapse>
       </Container >
     </Navbar>
-    <h1 className='text-center text-dark my-5'>WELCOME TO RESTAURNT APP</h1>
+    <h1 className='text-center text-dark my-5'>WELCOME TO DISHA MOMO RESTAURNT APP</h1>
     <p className='text-danger mb-5 '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quidem iure soluta molestiae sed minus quae debitis alias doloremque corporis, animi ullam laudantium ut et veniam placeat nisi corrupti quibusdam.
     Explicabo commodi vitae aliquam animi expedita tempore placeat omnis, amet similique reiciendis delectus labore rerum velit. Voluptas nihil optio nam neque nostrum commodi? Aspernatur sed voluptatum porro ullam quibusdam laborum?
     Aut quae rerum veritatis mollitia esse dolorum ratione itaque sapiente quasi odit nostrum dignissimos maiores illum minima eius atque sequi necessitatibus optio, quo, exercitationem ut eos incidunt? Deleniti, cumque porro.</p>
